@@ -189,8 +189,8 @@ The 32B/14B teachers have vocab size 151,936; the 3B student has 151,665. An `al
 | Learning rate | 2e-4 (cosine LR with 5% warmup) |
 | Epochs | 3 |
 | Precision | bfloat16 |
-| GPU | NVIDIA RTX 5090 (32 GB VRAM) |
-
+| GPU 1 | NVIDIA A6000 (48 GB VRAM)(For LLM Hosting) |
+| GPU 2 | NVIDIA Rtx 5070 Ti (16 GB VRAM)(Transformer Finetuning) |
 ### Dependencies
 
 ```
@@ -338,3 +338,5 @@ Research use only. If you use or build upon any of these projects, please cite t
 **Ankan Kumar Roy** — Bengali NLP Research, Dual-Teacher Knowledge Distillation Project  
 BRAC University  
 [ankan.kumar.roy1@g.bracu.ac.bd](mailto:ankan.kumar.roy1@g.bracu.ac.bd)
+From 
+T2530975
