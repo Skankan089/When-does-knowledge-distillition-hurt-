@@ -128,7 +128,10 @@ $$A_t = 1 - \text{JSD}(p_{32B}^t \| p_{14B}^t) \quad \in [0, 1]$$
 $$\lambda_t = \sigma\!\bigl(k \cdot (A_t - \delta)\bigr)$$
 
 **EWAD Loss with CE floor** (30% gold CE always preserved to prevent overfitting):
-$$\mathcal{L}_{\text{EWAD}} = \frac{1}{T} \sum_t \Bigl[\underbrace{\lambda_t \bigl(w_{32B}^t \cdot \text{KL}_{32B} + w_{14B}^t \cdot \text{KL}_{14B}\bigr)}_{\text{KD weight} \in [0, 0.7]} + \underbrace{(1 - \lambda_t + 0.3)}_{\text{CE weight} \in [0.3, 1.0]} \cdot \text{CE}(y_t^*, p_S^t)\Bigr]$$
+
+$$\mathcal{L}_{\text{EWAD}} = \frac{1}{T} \sum_t \Bigl[ \alpha_t \cdot \bigl(w_{32B}^t \cdot \text{KL}_{32B} + w_{14B}^t \cdot \text{KL}_{14B}\bigr) + \beta_t \cdot \text{CE}(y_t^*, p_S^t) \Bigr]$$
+
+where the KD weight $\alpha_t = \lambda_t \cdot (1 - \text{CE\_floor}) \in [0,\ 0.7]$ and the CE weight $\beta_t = 1 - \alpha_t \in [0.3,\ 1.0]$, with $\text{CE\_floor} = 0.3$ ensuring gold labels always anchor the student.
 
 **Interpretation:** When teachers agree ($\lambda_t \to 1$), the student blends knowledge from both teachers weighted by their confidence. When teachers disagree ($\lambda_t \to 0$), the student falls back to the gold label, avoiding corrupted teacher signals.
 
