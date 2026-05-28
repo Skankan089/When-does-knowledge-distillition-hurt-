@@ -1,0 +1,226 @@
+@article{article,
+author = {Maindonald, John},
+year = {2007},
+month = {01},
+pages = {},
+title = {Pattern Recognition and Machine Learning},
+volume = {17},
+journal = {Journal of Statistical Software},
+doi = {10.18637/jss.v017.b05}
+}
+@inproceedings{desai-durrett-2020-calibration,
+    title = "Calibration of Pre-trained Transformers",
+    author = "Desai, Shrey  and
+      Durrett, Greg",
+    editor = "Webber, Bonnie  and
+      Cohn, Trevor  and
+      He, Yulan  and
+      Liu, Yang",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.emnlp-main.21/",
+    doi = "10.18653/v1/2020.emnlp-main.21",
+    pages = "295--302",
+    abstract = "Pre-trained Transformers are now ubiquitous in natural language processing, but despite their high end-task performance, little is known empirically about whether they are calibrated. Specifically, do these models' posterior probabilities provide an accurate empirical measure of how likely the model is to be correct on a given example? We focus on BERT and RoBERTa in this work, and analyze their calibration across three tasks: natural language inference, paraphrase detection, and commonsense reasoning. For each task, we consider in-domain as well as challenging out-of-domain settings, where models face more examples they should be uncertain about. We show that: (1) when used out-of-the-box, pre-trained models are calibrated in-domain, and compared to baselines, their calibration error out-of-domain can be as much as 3.5x lower; (2) temperature scaling is effective at further reducing calibration error in-domain, and using label smoothing to deliberately increase empirical uncertainty helps calibrate posteriors out-of-domain."
+}
+@unknown{unknown,
+author = {Dettmers, Tim and Lewis, Mike and Belkada, Younes and Zettlemoyer, Luke},
+year = {2022},
+month = {08},
+pages = {},
+title = {LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale},
+doi = {10.48550/arXiv.2208.07339}
+}
+@unknown{unknown,
+author = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+year = {2023},
+month = {05},
+pages = {},
+title = {QLoRA: Efficient Finetuning of Quantized LLMs},
+doi = {10.48550/arXiv.2305.14314}
+}
+@unknown{unknown,
+author = {Frantar, Elias and Ashkboos, Saleh and Hoefler, Torsten and Alistarh, Dan},
+year = {2022},
+month = {10},
+pages = {},
+title = {GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers},
+doi = {10.48550/arXiv.2210.17323}
+}
+@unknown{unknown,
+author = {Gu, Yuxian and Dong, Li and Wei, Furu and Huang, Minlie},
+year = {2023},
+month = {06},
+pages = {},
+title = {Knowledge Distillation of Large Language Models},
+doi = {10.48550/arXiv.2306.08543}
+}
+@article{article,
+author = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian},
+year = {2017},
+month = {06},
+pages = {},
+title = {On Calibration of Modern Neural Networks},
+doi = {10.48550/arXiv.1706.04599}
+}
+@article{article,
+author = {Hinton, Geoffrey and Dean, Jeff and Vinyals, Oriol},
+year = {2014},
+month = {03},
+pages = {1-9},
+title = {Distilling the Knowledge in a Neural Network}
+}
+@article{article,
+author = {Hubara, Itay and Courbariaux, Matthieu and Soudry, Daniel and El-Yaniv, Ran},
+year = {2016},
+month = {09},
+pages = {},
+title = {Quantized Neural Networks: Training Neural Networks with Low Precision Weights and Activations},
+volume = {18},
+journal = {Journal of Machine Learning Research},
+doi = {10.48550/arXiv.1609.07061}
+}
+@article{jiang-etal-2021-know,
+    title = "How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering",
+    author = "Jiang, Zhengbao  and
+      Araki, Jun  and
+      Ding, Haibo  and
+      Neubig, Graham",
+    editor = "Roark, Brian  and
+      Nenkova, Ani",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "9",
+    year = "2021",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/2021.tacl-1.57/",
+    doi = "10.1162/tacl_a_00407",
+    pages = "962--977",
+    abstract = "Recent works have shown that language models (LM) capture different types of knowledge regarding facts or common sense. However, because no model is perfect, they still fail to provide appropriate answers in many cases. In this paper, we ask the question, ``How can we know when language models know, with confidence, the answer to a particular query?'' We examine this question from the point of view of calibration, the property of a probabilistic model{'}s predicted probabilities actually being well correlated with the probabilities of correctness. We examine three strong generative models{---}T5, BART, and GPT-2{---}and study whether their probabilities on QA tasks are well calibrated, finding the answer is a relatively emphatic no. We then examine methods to calibrate such models to make their confidence scores correlate better with the likelihood of correctness through fine-tuning, post-hoc probability modification, or adjustment of the predicted outputs or inputs. Experiments on a diverse range of datasets demonstrate the effectiveness of our methods. We also perform analysis to study the strengths and limitations of these methods, shedding light on further improvements that may be made in methods for calibrating LMs. We have released the code at \url{https://github.com/jzbjyb/lm-calibration}."
+}
+@unknown{unknown,
+author = {Kadavath, Saurav and Conerly, Tom and Askell, Amanda and Henighan, Tom and Drain, Dawn and Perez, Ethan and Schiefer, Nicholas and Dodds, Zac and DasSarma, Nova and Tran-Johnson, Eli and Johnston, Scott and El-Showk, Sheer and Jones, Andy and Elhage, Nelson and Hume, Tristan and Chen, Anna and Bai, Yuntao and Bowman, Sam and Fort, Stanislav and Kaplan, Jared},
+year = {2022},
+month = {07},
+pages = {},
+title = {Language Models (Mostly) Know What They Know},
+doi = {10.48550/arXiv.2207.05221}
+}
+@inproceedings{kim-rush-2016-sequence,
+    title = "Sequence-Level Knowledge Distillation",
+    author = "Kim, Yoon  and
+      Rush, Alexander M.",
+    editor = "Su, Jian  and
+      Duh, Kevin  and
+      Carreras, Xavier",
+    booktitle = "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2016",
+    address = "Austin, Texas",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D16-1139/",
+    doi = "10.18653/v1/D16-1139",
+    pages = "1317--1327"
+}
+@misc{kull2019temperaturescalingobtainingwellcalibrated,
+      title={Beyond temperature scaling: Obtaining well-calibrated multiclass probabilities with Dirichlet calibration}, 
+      author={Meelis Kull and Miquel Perello-Nieto and Markus Kängsepp and Telmo Silva Filho and Hao Song and Peter Flach},
+      year={2019},
+      eprint={1910.12656},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1910.12656}, 
+}
+@misc{kuhn2023semanticuncertaintylinguisticinvariances,
+      title={Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation}, 
+      author={Lorenz Kuhn and Yarin Gal and Sebastian Farquhar},
+      year={2023},
+      eprint={2302.09664},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2302.09664}, 
+}
+@misc{lin2026awqactivationawareweightquantization,
+      title={AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration}, 
+      author={Ji Lin and Jiaming Tang and Haotian Tang and Shang Yang and Wei-Ming Chen and Wei-Chen Wang and Guangxuan Xiao and Xingyu Dang and Chuang Gan and Song Han},
+      year={2026},
+      eprint={2306.00978},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2306.00978}, 
+}
+@misc{liu2023llmqatdatafreequantizationaware,
+      title={LLM-QAT: Data-Free Quantization Aware Training for Large Language Models}, 
+      author={Zechun Liu and Barlas Oguz and Changsheng Zhao and Ernie Chang and Pierre Stock and Yashar Mehdad and Yangyang Shi and Raghuraman Krishnamoorthi and Vikas Chandra},
+      year={2023},
+      eprint={2305.17888},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2305.17888}, 
+}
+@misc{minderer2021revisitingcalibrationmodernneural,
+      title={Revisiting the Calibration of Modern Neural Networks}, 
+      author={Matthias Minderer and Josip Djolonga and Rob Romijnders and Frances Hubis and Xiaohua Zhai and Neil Houlsby and Dustin Tran and Mario Lucic},
+      year={2021},
+      eprint={2106.07998},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2106.07998}, 
+}
+@misc{müller2020doeslabelsmoothinghelp,
+      title={When Does Label Smoothing Help?}, 
+      author={Rafael Müller and Simon Kornblith and Geoffrey Hinton},
+      year={2020},
+      eprint={1906.02629},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1906.02629}, 
+}
+@misc{nixon2020measuringcalibrationdeeplearning,
+      title={Measuring Calibration in Deep Learning}, 
+      author={Jeremy Nixon and Mike Dusenberry and Ghassen Jerfel and Timothy Nguyen and Jeremiah Liu and Linchuan Zhang and Dustin Tran},
+      year={2020},
+      eprint={1904.01685},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1904.01685}, 
+}
+@misc{pereyra2017regularizingneuralnetworkspenalizing,
+      title={Regularizing Neural Networks by Penalizing Confident Output Distributions}, 
+      author={Gabriel Pereyra and George Tucker and Jan Chorowski and Łukasz Kaiser and Geoffrey Hinton},
+      year={2017},
+      eprint={1701.06548},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/1701.06548}, 
+}
+@misc{si2023promptinggpt3reliable,
+      title={Prompting GPT-3 To Be Reliable}, 
+      author={Chenglei Si and Zhe Gan and Zhengyuan Yang and Shuohang Wang and Jianfeng Wang and Jordan Boyd-Graber and Lijuan Wang},
+      year={2023},
+      eprint={2210.09150},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2210.09150}, 
+}
+@misc{tian2023justaskcalibrationstrategies,
+      title={Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback}, 
+      author={Katherine Tian and Eric Mitchell and Allan Zhou and Archit Sharma and Rafael Rafailov and Huaxiu Yao and Chelsea Finn and Christopher D. Manning},
+      year={2023},
+      eprint={2305.14975},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2305.14975}, 
+}
+@misc{wang2020minilmdeepselfattentiondistillation,
+      title={MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers}, 
+      author={Wenhui Wang and Furu Wei and Li Dong and Hangbo Bao and Nan Yang and Ming Zhou},
+      year={2020},
+      eprint={2002.10957},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2002.10957}, 
+}

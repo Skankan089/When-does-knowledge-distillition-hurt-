@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "MT5-small Knowledge Distillation — EWAD + CPDP",
+    "student_model": "google/mt5-small",
+    "ewad_teacher": "google/mt5-base (fine-tuned per language set)",
+    "cpdp_teacher": "csebuetnlp/mT5_multilingual_XLSum",
+    "training": {
+      "epochs_max": 5,
+      "batch_size": 4,
+      "grad_accum": 4,
+      "effective_batch": 16,
+      "lr_student": 0.0003,
+      "lr_teacher": 0.0005,
+      "early_stop_patience": 3,
+      "eval_every_batches": 100,
+      "batches_per_epoch": 1500
+    },
+    "methods": ["baseline", "ewad", "ewad_cpdp"],
+    "method_labels": {
+      "baseline": "Baseline (CE only)",
+      "ewad": "EWAD",
+      "ewad_cpdp": "EWAD + CPDP"
+    }
+  },
+  "language_sets": [
+    {
+      "set_id": "lang1",
+      "name": "Set 1",
+      "languages": ["hindi", "urdu", "sinhala", "indonesian", "nepali"],
+      "overall": {
+        "baseline":  { "rouge1": 0.1978, "rouge2": 0.0552, "rougeL": 0.1709 },
+        "ewad":      { "rouge1": 0.1964, "rouge2": 0.0671, "rougeL": 0.1744 },
+        "ewad_cpdp": { "rouge1": 0.2005, "rouge2": 0.0629, "rougeL": 0.1727 }
+      },
+      "per_language_rougeL": {
+        "hindi":      { "baseline": 0.1774, "ewad": 0.1712, "ewad_cpdp": 0.1784 },
+        "urdu":       { "baseline": 0.2512, "ewad": 0.2746, "ewad_cpdp": 0.2558 },
+        "sinhala":    { "baseline": 0.0918, "ewad": 0.1187, "ewad_cpdp": 0.1362 },
+        "indonesian": { "baseline": 0.1507, "ewad": 0.1342, "ewad_cpdp": 0.1478 },
+        "nepali":     { "baseline": 0.1832, "ewad": 0.1730, "ewad_cpdp": 0.1450 }
+      }
+    },
+    {
+      "set_id": "lang2",
+      "name": "Set 2",
+      "languages": ["amharic", "hausa", "pashto", "portuguese", "russian"],
+      "overall": {
+        "baseline":  { "rouge1": 0.1863, "rouge2": 0.0461, "rougeL": 0.1601 },
+        "ewad":      { "rouge1": 0.1970, "rouge2": 0.0495, "rougeL": 0.1673 },
+        "ewad_cpdp": { "rouge1": 0.2045, "rouge2": 0.0560, "rougeL": 0.1763 }
+      },
+      "per_language_rougeL": {
+        "amharic":    { "baseline": 0.0868, "ewad": 0.1306, "ewad_cpdp": 0.1032 },
+        "hausa":      { "baseline": 0.2048, "ewad": 0.2128, "ewad_cpdp": 0.2162 },
+        "pashto":     { "baseline": 0.2466, "ewad": 0.2514, "ewad_cpdp": 0.2434 },
+        "portuguese": { "baseline": 0.1661, "ewad": 0.1448, "ewad_cpdp": 0.1744 },
+        "russian":    { "baseline": 0.0961, "ewad": 0.0969, "ewad_cpdp": 0.1440 }
+      }
+    },
+    {
+      "set_id": "lang3",
+      "name": "Set 3",
+      "languages": ["persian", "punjabi", "vietnamese", "marathi", "thai"],
+      "overall": {
+        "baseline":  { "rouge1": 0.1476, "rouge2": 0.0423, "rougeL": 0.1293 },
+        "ewad":      { "rouge1": 0.1506, "rouge2": 0.0463, "rougeL": 0.1241 },
+        "ewad_cpdp": { "rouge1": 0.1438, "rouge2": 0.0487, "rougeL": 0.1247 }
+      },
+      "per_language_rougeL": {
+        "persian":    { "baseline": 0.2375, "ewad": 0.2054, "ewad_cpdp": 0.2473 },
+        "punjabi":    { "baseline": 0.1589, "ewad": 0.1245, "ewad_cpdp": 0.1250 },
+        "vietnamese": { "baseline": 0.1046, "ewad": 0.1190, "ewad_cpdp": 0.1059 },
+        "marathi":    { "baseline": 0.1106, "ewad": 0.1321, "ewad_cpdp": 0.1070 },
+        "thai":       { "baseline": 0.0351, "ewad": 0.0396, "ewad_cpdp": 0.0383 }
+      }
+    }
+  ],
+  "all_languages_flat": [
+    { "language": "hindi",      "set": "lang1", "baseline_rl": 0.1774, "ewad_rl": 0.1712, "ewad_cpdp_rl": 0.1784 },
+    { "language": "urdu",       "set": "lang1", "baseline_rl": 0.2512, "ewad_rl": 0.2746, "ewad_cpdp_rl": 0.2558 },
+    { "language": "sinhala",    "set": "lang1", "baseline_rl": 0.0918, "ewad_rl": 0.1187, "ewad_cpdp_rl": 0.1362 },
+    { "language": "indonesian", "set": "lang1", "baseline_rl": 0.1507, "ewad_rl": 0.1342, "ewad_cpdp_rl": 0.1478 },
+    { "language": "nepali",     "set": "lang1", "baseline_rl": 0.1832, "ewad_rl": 0.1730, "ewad_cpdp_rl": 0.1450 },
+    { "language": "amharic",    "set": "lang2", "baseline_rl": 0.0868, "ewad_rl": 0.1306, "ewad_cpdp_rl": 0.1032 },
+    { "language": "hausa",      "set": "lang2", "baseline_rl": 0.2048, "ewad_rl": 0.2128, "ewad_cpdp_rl": 0.2162 },
+    { "language": "pashto",     "set": "lang2", "baseline_rl": 0.2466, "ewad_rl": 0.2514, "ewad_cpdp_rl": 0.2434 },
+    { "language": "portuguese", "set": "lang2", "baseline_rl": 0.1661, "ewad_rl": 0.1448, "ewad_cpdp_rl": 0.1744 },
+    { "language": "russian",    "set": "lang2", "baseline_rl": 0.0961, "ewad_rl": 0.0969, "ewad_cpdp_rl": 0.1440 },
+    { "language": "persian",    "set": "lang3", "baseline_rl": 0.2375, "ewad_rl": 0.2054, "ewad_cpdp_rl": 0.2473 },
+    { "language": "punjabi",    "set": "lang3", "baseline_rl": 0.1589, "ewad_rl": 0.1245, "ewad_cpdp_rl": 0.1250 },
+    { "language": "vietnamese", "set": "lang3", "baseline_rl": 0.1046, "ewad_rl": 0.1190, "ewad_cpdp_rl": 0.1059 },
+    { "language": "marathi",    "set": "lang3", "baseline_rl": 0.1106, "ewad_rl": 0.1321, "ewad_cpdp_rl": 0.1070 },
+    { "language": "thai",       "set": "lang3", "baseline_rl": 0.0351, "ewad_rl": 0.0396, "ewad_cpdp_rl": 0.0383 }
+  ]
+}
